@@ -14,6 +14,7 @@
 \usepackage[orientation=portrait,size=a0,scale=1.0]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{nott}
+
 \usepackage{physics}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -45,13 +46,14 @@
 \title{Scaling and cutoff effects of the topological susceptibility with gradient flow in $SU(3)$ Yang--Mills theory on the lattice.}
 
 % \author{Agajan Torayev \inst{1} \and Ben Bitdiddle \inst{2} \and Lem E. Tweakit \inst{2}}
-\author{P. Butti \inst{1}, A. Conigli \inst{2}, A. Saez \inst{3}, F. P. Panadero \inst{4}}
+\author{P. Butti \inst{1}, G. Catumba \inst{2}, A. Conigli \inst{3}, A. Saez \inst{4}, F. P. Panadero \inst{5}}
 
 \institute[shortinst]{
   \inst{1} University of Southern Denmark 
-  \samelineand \inst{2} Mainz...
-  \samelineand \inst{3} IFIC Valencia
-  \samelineand \inst{4} IFT Madrid
+  \samelineand \inst{2} Milano
+  \samelineand \inst{3} Mainz...
+  \samelineand \inst{4} IFIC Valencia
+  \samelineand \inst{5} IFT Madrid
   }
 
 % ====================
@@ -79,34 +81,48 @@
 % ====================
 
 
+% ===== preamble additions (put near the other \usepackage lines in poster.tex) =====
+\usetikzlibrary{decorations.markings,arrows.meta}
+
+% directed link: line with an arrowhead at its midpoint
 \tikzset{
   dlink/.style={
-    line width=0.5pt,
+    line width=0.9pt,
     postaction={decorate},
     decoration={markings,
-      mark=at position 0.58 with {\arrow{Stealth[length=1.6mm,width=1.6mm]}}}
+      mark=at position 0.58 with {\arrow{Stealth[length=2.6mm,width=2.6mm]}}}
   }
 }
 
-% \clover[scale]{a}{b} : optional first arg scales the whole picture (default 1)
-\newcommand{\clover}[3][1]{%
+% \cloverleaf[scale]{a}{b}: four a-by-b rectangular leaves sharing the site x
+\newcommand{\cloverleaf}[3][1]{%
 \scalebox{#1}{%
 \begin{tikzpicture}[x=1cm,y=1cm,baseline=(current bounding box.center)]
-  \def\a{#2}\def\b{#3}
-  \draw[dlink] (0,-\b)--(\a,-\b);   \draw[dlink] (\a,-\b)--(\a,0);
-  \draw[dlink] (\a,0)--(\a,\b);     \draw[dlink] (\a,\b)--(0,\b);
-  \draw[dlink] (0,\b)--(-\a,\b);    \draw[dlink] (-\a,\b)--(-\a,0);
-  \draw[dlink] (-\a,0)--(-\a,-\b);  \draw[dlink] (-\a,-\b)--(0,-\b);
-  \draw[dlink] (\a,0)--(0,0);       \draw[dlink] (0,0)--(0,\b);
-  \draw[dlink] (-\a,0)--(0,0);      \draw[dlink] (0,0)--(0,-\b);
-  \fill (0,0) circle (1.3pt);
-  \node[font=\scriptsize] at (0.34,0.30) {$\hat\nu$};
-  \node[font=\scriptsize] at (0.62,-0.16) {$\hat\mu$};
+  \def\aa{#2}\def\bb{#3}
+  \draw[dlink] (0,-\bb)--(\aa,-\bb);   \draw[dlink] (\aa,-\bb)--(\aa,0);
+  \draw[dlink] (\aa,0)--(\aa,\bb);     \draw[dlink] (\aa,\bb)--(0,\bb);
+  \draw[dlink] (0,\bb)--(-\aa,\bb);    \draw[dlink] (-\aa,\bb)--(-\aa,0);
+  \draw[dlink] (-\aa,0)--(-\aa,-\bb);  \draw[dlink] (-\aa,-\bb)--(0,-\bb);
+  \draw[dlink] (\aa,0)--(0,0);         \draw[dlink] (0,0)--(0,\bb);
+  \draw[dlink] (-\aa,0)--(0,0);        \draw[dlink] (0,0)--(0,-\bb);
+  \fill (0,0) circle (2pt);
+  \node[font=\footnotesize] at (0.36,0.32) {$\hat\nu$};
+  \node[font=\footnotesize] at (0.64,-0.20) {$\hat\mu$};
 \end{tikzpicture}}%
 }
 
-
-
+\newcommand{\plaquette}[1][1]{%
+\scalebox{#1}{%
+\begin{tikzpicture}[x=1cm,y=1cm,baseline=(current bounding box.center)]
+  \draw[dlink] (-1,-1)--(-1,1);   % bottom: x -> x+mu
+  \draw[dlink] (-1,1)--(1,1);   % right:  x+mu -> x+mu+nu
+  \draw[dlink] (1,1)--(1,-1);   % top:    back along -mu
+  \draw[dlink] (1,-1)--(-1,-1);   % left:   down along -nu
+  \fill (-1,-1) circle (1.5pt);
+  \node[font=\footnotesize] at (0.01,-0.5) {$\hat\mu$};
+  \node[font=\footnotesize] at (-0.28,0.5) {$\hat\nu$};
+\end{tikzpicture}}%
+}
 
 
 
@@ -129,28 +145,13 @@
 
 \begin{column}{\colwidth}
 
-  \begin{block}{Introduction}
-    \lipsum[1]
-  \end{block}
+  \input{BLOCKS/introduction}
+%
+  \input{BLOCKS/topological_charge}
 
-  \begin{block}{The topological charge on the lattice}
-    \include{BLOCKS/topological_charge}
-  \end{block}
+  \input{BLOCKS/gradient_flow}
 
-  \begin{block}{Gradient flow and Symanzik improvement}
-    \lipsum[1]
-    \lipsum[1]
-  \end{block}
-
-  \begin{block}{Ensemble generation}
-    \lipsum[1]
-    \begin{figure}
-      \includegraphics[scale=0.2]{PLOTS/placeholder.jpg}
-    \end{figure}
-    \lipsum[1]
-
-  \end{block}
-
+  \input{BLOCKS/ensemble_generation}
 
 \end{column}
 
@@ -177,7 +178,6 @@
     \end{figure}
     % \lipsum[1]
   \end{block}
-
 
   \begin{block}{References & Conclusion}
     \lipsum[1]

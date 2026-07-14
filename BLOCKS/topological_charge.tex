@@ -1,7 +1,49 @@
+\begin{block}{The topological charge on the lattice}
+  Yang--Mills gauge fields are classified by an integer-valued topological
+  charge $Q$, the four-volume integral of the density
+  $q(x)=\frac{1}{32\pi^2}\,\epsilon_{\mu\nu\rho\sigma}
+  \operatorname{Tr}\!\left\{F_{\mu\nu}F_{\rho\sigma}\right\}$. In the 
+  infinite-volume limit, it defines the \textbf{topological susceptibility}
+  \begin{equation*}
+    \chi \;=\; \lim_{V\to\infty}\frac{\langle Q^2\rangle}{V}\,.
+  \end{equation*}
 
-% \begin{equation}
-%     \clover[0.6]{2}{1}
-% \end{equation}
+% 
+  \textsc{\textbf{Gluonic definition: }} On the lattice, $\hat Q=a^4\sum_x \hat q(x)$ for any discretisation $\hat q$ with
+  the correct classical continuum limit. We employ the tree-level improved
+  density
+  \begin{equation*}
+    \hat q^{\mathrm{imp}}(x) \;=\; b_0\,\hat q^{\mathrm{clov}}(x)
+                        \;+\; b_1\,\hat q^{\mathrm{rect}}(x)\,,
+    \qquad
+    \hat q(x) \;\propto\;
+    \epsilon_{\mu\nu\rho\sigma}\operatorname{Tr}\!\left(
+      C_{\mu\nu}\,C_{\rho\sigma}\right),
+  \end{equation*}
+  where the field-strength insertions are the clover-leaf averages
+  \begin{equation*}
+    C^{\mathrm{clov}}_{\mu\nu}(x)=\frac{1}{4}\operatorname{Im}\!\left(
+      \vcenter{\hbox{\cloverleaf[0.7]{1}{1}}}\right),
+    \qquad
+    C^{\mathrm{rect}}_{\mu\nu}(x)=\frac{1}{8}\operatorname{Im}\!\left(
+      \vcenter{\hbox{\cloverleaf[0.7]{2}{1}}}
+      \,+\,
+      \vcenter{\hbox{\cloverleaf[0.7]{1}{2}}}\right).
+  \end{equation*}
+  The standard clover discretisation corresponds to $(b_0,b_1)=(1,0)$ and
+  carries $\mathcal{O}(a^2)$ artifacts. Choosing instead the
+  L\"uscher--Weisz coefficients $b_1=-{1}/{12}$, $b_0=1-8b_1={5}/{3}$
+  cancels these at tree level, so that $\hat q^{\mathrm{imp}}$ approaches the
+  continuum as $\mathcal{O}(a^4)$. We confront both choices to assess
+  cutoff effects directly.
 
-\lipsum[1]
-\lipsum[1]
+  \textsc{\textbf{Renormalisation and smoothing:}}
+  At finite lattice spacing the charge density $\hat q$ requires a 
+  multiplicative renormalisation, $Q\to Z_Q\,Q$ with
+  $Z_Q\neq 1$. This is circumvented by evaluating $\hat q$ on smoothed
+  fields: \emph{cooling} and \emph{smearing} (APE, stout, HYP) have long
+  been used to this end. We adopt the \textbf{gradient flow}~\cite{Luscher:2010iy}.
+%   which suppresses UV modes below the well-defined smoothing scale
+%   $\lambda_S=\sqrt{8t}$ and has proven renormalisation properties.
+
+\end{block}

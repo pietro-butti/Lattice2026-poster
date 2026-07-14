@@ -1,0 +1,54 @@
+% Requires xcolor (loaded automatically by beamer).
+\colorlet{jbl}{blue!65!black}
+\colorlet{jgr}{green!40!black}
+\colorlet{jre}{red!70!black}
+
+\begin{block}{A fully $\mathcal{O}(a^2)$-improved susceptibility}
+
+  In the Symanzik effective theory, the susceptibility measured at flow
+  time $t_c$ admits the expansion~\cite{RamosSint:2015,Catumba:2024}
+  \begin{equation*}
+    \boxed{
+    \expval{\chi}_\text{latt} = \expval{\chi}_\text{cont} 
+    + a^2\qty[
+        {\color{jbl} \expval{\chi_2}} +
+        {\color{jgr} \expval{\chi S_{2,c}}} + 
+        {\color{jre} \expval{\chi S_{2,\text{fl}}}} + 
+        c_b \dv{t}\Big|_{t=t_c}\expval{\chi}
+    ]
+    + \order{a^4} \,,
+    }
+  \end{equation*}
+  where each $\mathcal{O}(a^2)$ insertion has a distinct origin --- and a
+  distinct cure:
+
+  \begin{itemize}
+    \item \textcolor{jbl}{\textbf{Observable:}}
+      $\textcolor{obsC}{\langle\chi_2\rangle}$ expansion of topological charge observable $\;\Rightarrow\;$
+      \emph{use} $\hat q^{\mathrm{imp}}$!
+    \item \textcolor{jgr}{\textbf{Action:}}
+      $\textcolor{actC}{\langle\chi\,S_{2,c}\rangle}$ is the insertion of the
+      $\mathcal{O}(a^2)$ counterterms of the path-integral action,
+      \begin{equation*}
+        S_\text{conf} = \frac{\beta}{3}\sum_x\qty(
+            c_0\sum_{\mu<\nu} \real \tr \qty(1 - \vcenter{\hbox{\plaquette[0.7]}})
+        +   c_1\sum_{\mu<\nu} \real \tr \qty(1 - \vcenter{\hbox{\cloverleaf[0.7]{2}{1}}})
+        )
+      \end{equation*}
+      $\;\Rightarrow\;$ \emph{use improved actions!}
+    \item \textcolor{jre}{\textbf{Flow:}}
+      $\textcolor{floC}{\langle\chi\,S_{2,\mathrm{fl}}\rangle}$ originates
+      from the flow-kernel action$\;\Rightarrow\;$ \emph{use the \textbf{Zeuthen
+      flow}~\cite{RamosSint:2015}}
+      \begin{equation*}
+        \partial_t V_\mu(x,t) = -g_0^2\,
+        \Big(1+\frac{a^2}{12}\,\nabla_\mu^{\ast}\nabla_\mu\Big)\,
+        \big[\partial_{x,\mu} S^{\mathrm{LW}}(V_t)\big]\, V_\mu(x,t)
+      \end{equation*}
+  \end{itemize}
+
+  The residual term, proportional to the flow-time derivative of $\chi$ at
+  $t_0$, tracks the $\mathcal{O}(a^2)$ ambiguity of the flow scale and is
+  measured directly from the $t$-dependence. Combining all three yields a
+  fully $\mathcal{O}(a^2)$-improved determination of $\chi$.
+\end{block}

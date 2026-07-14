@@ -1,0 +1,210 @@
+\begin{block}{Datasets}
+    \begin{description}
+        \item[\textbf{Big volumes~\cite{}:}] Big volumes
+        ($L\simeq 2.6\text{--}5.7\,\mathrm{fm}$), modest statistics. \\
+        4 different gauge actions + Zeuthen flow + clover $\hat Q$ (not improved).
+        \item[\textbf{Fully improved:}] Fixed volume ($L\simeq 1.4\,\mathrm{fm}$), 
+        bigger statistics. \\ 
+        Luscher-Weisz action + Zeuthen and Wilson flow + improved $\hat Q$ 
+        (clover + rectangle).
+    \end{description}
+    % The ensembles are generated with standard HMC with \verb|LatticeGPU.jl| package \cite{???}, running on GPUs.
+    \medskip
+    \centering
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \setlength{\tabcolsep}{0.55em}
+        \renewcommand{\arraystretch}{1.05}
+        \begin{tabular}{lcccc}
+        \toprule
+            action & $\beta$ & $a\,[\mathrm{fm}]$ & $L/a$ & $N_\mathrm{conf}/\tau_\mathrm{int}$\\
+        \midrule
+            W    & 6.13   & 0.076 & 64 & 328 \\
+                & 6.25   & 0.063 & 64 & 224 \\
+                & 6.2929 & 0.060 & 64 & 114 \\
+                & 6.35   & 0.055 & 64 & 104 \\
+                & 6.42   & 0.050 & 64 & 149 \\
+                & 6.52   & 0.043 & 64 & 152 \\
+        \midrule
+            IW   & 2.79   & 0.074 & 64 & 92 \\
+                & 2.91   & 0.062 & 64 & 25 \\
+                & 2.945  & 0.060 & 64 & 24 \\
+                & 3.00   & 0.055 & 64 & 43 \\
+                & 3.11   & 0.048 & 64 & 25 \\
+                & 3.18   & 0.044 & 64 & 23 \\
+        \midrule
+            DBW2 & 1.111  & 0.076 & 64 & 23  \\
+                & 1.16   & 0.069 & 64 & 22  \\
+                & 1.24   & 0.059 & 64 & 24  \\
+                & 1.30   & 0.052 & 64 & 21  \\
+                & 1.35   & 0.048 & 64 & 357 \\
+                & 1.40   & 0.043 & 64 & 24  \\
+        \bottomrule
+        \end{tabular}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \centering
+        \setlength{\tabcolsep}{0.55em}
+        \renewcommand{\arraystretch}{1.05}
+        \begin{tabular}{lcccc}
+        \toprule
+        action & $\beta$ & $a\,[\mathrm{fm}]$ & $L/a$ & $N_\mathrm{conf}/\tau_\mathrm{int}$\\
+        \midrule
+        LW & 4.45   & 0.091 & 64 & 209 \\
+            & 4.59   & 0.075 & 64 & 157 \\
+            & 4.71   & 0.064 & 64 & 117 \\
+            & 4.76   & 0.060 & 64 & 89  \\
+            & 4.83   & 0.054 & 64 & 84  \\
+            & 4.93   & 0.048 & 64 & 77  \\
+            & 5.00   & 0.044 & 64 & 62  \\
+        \midrule
+        LW & 4.2703 & 0.12  & 12 & --- \\
+            & 4.2703 & 0.12  & 16 & --- \\
+            & 4.4464 & 0.09  & 16 & --- \\
+            & 4.6178 & 0.07  & 20 & --- \\
+            & 4.7594 & 0.06  & 24 & --- \\
+            & 4.8739 & 0.05  & 28 & --- \\
+        \bottomrule
+        \end{tabular}
+
+        \medskip
+        \justifying
+    \end{minipage}
+
+    {\small W: Wilson plaquette; IW: Iwasaki; DBW2; LW: L\"uscher--Weisz
+    tree-level Symanzik.}
+\end{block}
+
+
+
+
+% \begin{block}{Datasets}
+%     % \lipsum[1]
+%     \begin{column}{0.12}
+%         \begin{tabular}{ccccc}
+%             \toprule
+%                 action & $\beta$ & $a\,[\text{fm}]$  & $L/a$ & $N_\text{conf}/\tau_\text{int}$\\
+%             \midrule
+%                 W & 6.13   & 0.076 & 64 & 328 \\
+%                 W & 6.25   & 0.063 & 64 & 224 \\
+%                 W & 6.2929 & 0.06  & 64 & 114 \\
+%                 W & 6.35   & 0.055 & 64 & 104 \\
+%                 W & 6.42   & 0.05  & 64 & 149 \\
+%                 W & 6.52   & 0.043 & 64 & 152 \\
+%             \midrule
+%                 IW & 2.79  & 0.074 & 64 & 92 \\
+%                 IW & 2.91  & 0.062 & 64 & 25 \\
+%                 IW & 2.945 & 0.06  & 64 & 24 \\
+%                 IW & 3.0   & 0.055 & 64 & 43 \\
+%                 IW & 3.11  & 0.048 & 64 & 25 \\
+%                 IW & 3.18  & 0.044 & 64 & 23 \\
+%             \midrule
+%                 DBW2 & 1.111 & 0.076 & 64 & 23  \\
+%                 DBW2 & 1.16  & 0.069 & 64 & 22  \\
+%                 DBW2 & 1.24  & 0.059 & 64 & 24  \\
+%                 DBW2 & 1.35  & 0.048 & 64 & 357 \\
+%                 DBW2 & 1.3   & 0.052 & 64 & 21  \\
+%                 DBW2 & 1.4   & 0.043 & 64 & 24  \\
+%             \bottomrule
+%         \end{tabular}        
+%     \end{column}
+%     \begin{column}{0.12}
+%         \begin{table}
+%             \begin{tabular}{cccccc}
+%                 \toprule
+%                     action & $\beta$ &  $a$ [fm] & $L/a$ & $N_\text{conf}/\tau_\text{int}$ \\
+%                 \midrule
+%                     LW & 4.2703 & 0.12 & 12 & ? \\
+%                     LW & 4.2703 & 0.12 & 16 & ? \\
+%                     LW & 4.4464 & 0.09 & 16 & ? \\
+%                     LW & 4.6178 & 0.07 & 20 & ? \\
+%                     LW & 4.7594 & 0.06 & 24 & ? \\
+%                     LW & 4.8739 & 0.05 & 28 & ? \\
+%                 \midrule
+%                     LW & 4.45 & 0.091 & 64 & 209  \\
+%                     LW & 4.59 & 0.075 & 64 & 157  \\
+%                     LW & 4.71 & 0.064 & 64 & 117  \\
+%                     LW & 4.76 & 0.06  & 64 & 89   \\
+%                     LW & 4.83 & 0.054 & 64 & 84   \\
+%                     LW & 4.93 & 0.048 & 64 & 77   \\
+%                     LW & 5.0  & 0.044 & 64 & 62   \\
+%                 \bottomrule
+%             \end{tabular} 
+%         \end{table}
+%     \end{column}
+
+
+% \end{block}
+
+
+
+
+% \begin{block}{Datasets}
+    
+% % \section{Ensemble generation}
+
+% We have generated 5 ensembles at 5 different values of the lattice spacing, spanning from $a\approx0.12-0.05$ fm, with a constant physical volume of $L=T\approx1.5$ fm.
+% %
+% Additionally, one ensemble at the coarsest lattice spacing with $L=T\approx1.9$ fm was generated in order to explore finite-volume effects.
+% %
+% The ensembles are generated with a HMC algorithm implemented in the \verb|LatticeGPU.jl| package \cite{???}, running on GPUs.
+% %
+% {\color{red} \textbf{[AS: give some details about the code? Maybe FP can write one/two lines?]}}
+% %
+% The algorithmic parameters are chosen such that the topological charge is properly sampled as we approach the continuum limit for the finests lattice spacings, as shown in Fig. \ref{fig:???}.
+% %
+% {\color{red} \textbf{[AS: add figures of the topological charge fluctuations.]}}
+% %
+% The number of total MDUs for each ensemble was chosen such that the number of independent configurations is $\sim8000$ for all ensembles, in order to be able to accurately estimate the topological susceptibility $\chi$.
+% %
+% {\color{red} \textbf{[AS: check this with actual tauints but I think this is roughly true.]}}
+% %
+% We show the list of ensembles generated in Table \ref{tab:ens}.
+% %
+
+% %
+% \begin{table}[htbp]
+% \centering
+% \begin{tabular}{cccccc}
+% \hline\hline
+% id & $a$ [fm] & $\beta$ & $L/a$ & MDUs & $\Delta_{\rm MDUs}$\\
+% \hline
+% a12\_b42\_L12 & 0.12 & 4.2703 & 12 & 350750 & 50 \\
+% \hline
+% a12\_b42\_L16 & 0.12 & 4.2703 & 16 & 400000 & 50 \\
+% \hline
+% a09\_b44\_L16 & 0.09 & 4.4464 & 16 & 400000 & 50 \\
+% \hline
+% a07\_b46\_L20 & 0.07 & 4.6178 & 20 & 2444400 & 150 \\
+% \hline
+% a06\_b47\_L24 & 0.06 & 4.7594 & 24 & 4970100 & 150 \\
+% \hline
+% a05\_b48\_L28 & 0.05 & 4.8739 & 28 & 4970100 & 800 \\
+% \hline\hline
+% \end{tabular}
+% \caption{List of generated ensembles, together with approximate values of the lattice spacing, and values for $\beta$, $L/a$, MDUs (the total number of Molecular Dynamics Units of the HMC algorithm), and $\Delta_{\rm MDUs}$ (the spacing between measurements in MDUs).
+% %
+% All ensebles have $L=T$.
+% %
+% The Wilson gauge action was employed in the ensemble generation.
+% %
+% {\color{red} {\textbf{[AS: for the MDUs column, these are the target values, for the superfine we are still generating it. Also, probably in the plots and numbers we are going to show not all the available data was used. So these are the numbers for full statistics but we are not analysing full statistics yet.]}}}
+% }
+% \label{tab:ens}
+% \end{table}
+% %
+
+% %
+% The Wilson and Zeuthen flow is measured in these ensembles employing the \verb|LatticeGPU.jl| package.
+% %
+% The latter implements adaptive flow from flow time $t=0$ to some latter $t$ close to $t_0$ -- where a finer, more precise flow integration is performed -- in order to speed up the computation.
+% %
+% {\color{red} \textbf{[AS: I did not mention that we also have flow measurements for several other values of $t$ ($t=0.1t_0,2.25t_0,...$) but I don't think we are showing anything about that yet.]}}
+% %
+% Finally, we use two different discretizations of the flowed topological charge, $Q_{\rm top}$ and $Q_{\rm rect}$, and the $\mbox{O}(a)$-improved combination $Q_{\rm impr}=???$
+% %
+% {\color{red} \textbf{[AS: someone write something about those discretizations, I forgot the details.]}}
+% %
+% {\color{red} \textbf{[AS: are we adding something about Guilherme's ensembles? Of so someone else might write about them? I did not look at them and don't know the details either.]}}
+% %
+% \end{block}
