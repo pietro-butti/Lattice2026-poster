@@ -26,7 +26,10 @@
 \usepackage{anyfontsize}
 \usepackage{lipsum}
 \usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
 
+\definecolor{hanblue}{rgb}{0.27, 0.42, 0.81}
+\definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
 % ====================
 % Lengths
 % ====================
@@ -146,7 +149,7 @@
 
 \begin{column}{\colwidth}
 
-  \input{BLOCKS/introduction}
+  % \input{BLOCKS/introduction}
 %
   \input{BLOCKS/topological_charge}
 
@@ -160,28 +163,12 @@
 
 \begin{column}{\colwidth}
 
-  \begin{block}{Continuum limit}
-    \lipsum[1]
-    \begin{figure}
-      \includegraphics[scale=0.15]{PLOTS/placeholder.jpg}
-      \includegraphics[scale=0.15]{PLOTS/placeholder.jpg}
-    \end{figure}
-  \end{block}
+  \input{BLOCKS/continuum_limit.tex}
 
-  \begin{block}{Cutoff effects}
-    \lipsum[1]
-    \begin{figure}
-      \includegraphics[scale=0.2]{PLOTS/placeholder.jpg}
-    \end{figure}
-    \lipsum[1]
-    \begin{figure}
-      \includegraphics[scale=0.2]{PLOTS/placeholder.jpg}
-    \end{figure}
+  \input{BLOCKS/cutoff_effects.tex}
+
+  \begin{block}{References}
     % \lipsum[1]
-  \end{block}
-
-  \begin{block}{References & Conclusion}
-    \lipsum[1]
 
     \nocite{*}
     \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
@@ -190,10 +177,12 @@
 
 \end{column}
 \separatorcolumn
-
-
-
 \end{columns}
+
+
+\begin{figure}
+  \includegraphics[scale=1.]{PLOTS/histories.pdf}
+\end{figure}
 \end{frame}
 
 \end{document}

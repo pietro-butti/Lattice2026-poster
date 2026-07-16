@@ -1,0 +1,37 @@
+\begin{block}{Cutoff effects at $O(a^2)$}
+  The higher-statistics LW ensembles allow the Symanzik expansion to be
+  dissected term by term. With a tree-level improved gauge action the
+  $\color{jgr}{\expval{\chi S_{2,c}}}$ contribution drops out, leaving the
+  observable and the flow as the only sources of $\order{a^2}$ contamination.
+
+  Forming ratios of definitions measured on the \emph{same} configurations
+  cancels $\expval{\chi}_\text{cont}$ and, Symanzik expansion dictates:
+  %
+  \begin{align*}
+    {\chi^\text{Zeuthen}_\text{clover}}/{\chi^\text{Zeuthen}_\text{impr}}
+      &= 1 + a^2
+        \qty[{\color{jbl}\expval{\chi_2^\text{cl}} - \expval{\chi_2^\text{imp}}}]
+      + \order{a^4} \,, \\[0.4em]
+    {\chi^\text{Wilson}_\text{impr}}/{\chi^\text{Zeuthen}_\text{impr}}
+      &= 1 + a^2
+        \qty[{\color{jre}\expval{\chi S_{2,\text{fl}}^{W}}
+                       - \expval{\chi S_{2,\text{fl}}^{Z}}}]
+      + \order{a^4} \,.
+  \end{align*}
+  We can access directly this two ratio separately
+  %
+    \begin{figure}
+      \includegraphics[scale=1.]{PLOTS/ratios_cutoff_cl.pdf}
+    \end{figure}
+
+  The blue points therefore probe the discretisation of the charge alone, the
+  red points that of the flow alone; both must reach $1$ at $a^2 = 0$, and do.
+  
+  The observable-related cutoff effects are more prominent: at the coarsest 
+  spacing the clover charge lies $22\%$ below the improved one, against $10\%$ for the flow. 
+  
+  A parabola in $a^2$ describes the entire range up to $a^2/t_0 = 0.48$, while a linear fit
+  restricted to the finest lattices is already sufficient --- the $a^4$ term is
+  a genuine mild correction, not an artefact of over-fitting.
+
+\end{block}
