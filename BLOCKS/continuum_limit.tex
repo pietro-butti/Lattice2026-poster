@@ -1,11 +1,28 @@
 \begin{block}{Continuum limit}
-    We compute $\chi$ in units of the flow scale $t_0$, and we attempt a continuum limit.
+    We compute the topological susceptibility $\chi$ as a function of the lattice
+    spacing $a^2$, both in units of the flow scale $t_0$. This dimensionless ratio
+    is sensitive to both classical and quantum cutoff effects.
     \begin{figure}
       \includegraphics[scale=0.6]{PLOTS/L64_CL.pdf}
       \includegraphics[scale=0.7]{PLOTS/cl_behaviour_t0.pdf}
     \end{figure}
     \begin{description}
-        \item[\textbf{Left:}] The Iwasaki and DBW2 ensembles are effectively frozen — topology is suppressed and the charge is badly undersampled — so we attempt a continuum extrapolation only for Wilson and Lüscher-Weisz, whose limits agree.
-        \item[\textbf{Right:}] 4 extrapolations from a single set of Lüscher-Weisz configurations with more statistics, spanning all combinations of Wilson/Zeuthen flow and clover/improved charge. The four definitions differ only at $\order{a^2}$ and, despite slopes of opposite sign, converge to a common continuum value — a nontrivial consistency check on the charge and flow discretisations.
+        \item[\textbf{Left:}]
+        {\color{asparagus}
+            The ``\emph{big volume}'' ensembles expose the $\order{a^2}$ cutoff effects
+            of the action discretisation. Since the charge uses the clover definition,
+            a residual ``classical'' effect contributes at the same order. With the
+            statistics available, both are subleading compared to the statistical error.
+            (Point opacity is proportional to the number of independent configurations
+            in the ensemble.)
+        }
+
+        \item[\textbf{Right:}]
+        {\color{hanblue}
+            The ``\emph{fully improved}'' ensembles isolate the ``classical'' $\order{a^2}$
+            effects. From a single, higher-statistics set of Lüscher--Weisz configurations
+            we compare four extrapolations, spanning all combinations of Wilson/Zeuthen
+            flow and clover/improved charge.
+        }
     \end{description}
 \end{block}
