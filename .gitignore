@@ -3,9 +3,9 @@
 *.fls
 *.nav
 *.out
-*.pdf
 *.toc
 *.snm
 *.log
 *.bbl
 *.blg
+poster.pdf
