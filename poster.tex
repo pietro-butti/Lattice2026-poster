@@ -1,7 +1,10 @@
+% !TeX document-id = {e57240da-2747-4ecc-baf4-a1fe920d8231}
 % Unofficial University of Cambridge Poster Template
 % https://github.com/andiac/gemini-cam
 % a fork of https://github.com/anishathalye/gemini
 % also refer to https://github.com/k4rtik/uchicago-poster
+
+% !TeX TXS-program:compile = txs:///latexmk -lualatex -bibtex -interaction=nonstopmode  -file-line-error
 
 \documentclass[final]{beamer}
 
@@ -30,6 +33,12 @@
 
 \definecolor{hanblue}{rgb}{0.27, 0.42, 0.81}
 \definecolor{asparagus}{rgb}{0.53, 0.66, 0.42}
+%\usepackage{xcolor}
+
+\definecolor{coolblue}{HTML}{0072B2}   % blue
+\definecolor{coolgreen}{HTML}{009E73}  % bluish-green
+\definecolor{skyblue}{HTML}{56B4E9}   % Okabe-Ito sky blue
+\definecolor{navy}{HTML}{2C3E70}
 % ====================
 % Lengths
 % ====================
@@ -201,6 +210,17 @@
   \input{BLOCKS/continuum_limit.tex}
 
   \input{BLOCKS/cutoff_effects.tex}
+  
+  
+  \begin{block}{Outlook}
+  	\begin{itemize}
+  		\item \textbf{Generate matched Wilson-action ensembles} over the same lattice-spacing range and with comparable statistics, to resolve the action-induced \textbf{quantum cutoff effects}
+  		\medskip
+  		\item \textbf{Compare the approach to the continuum} across the available gauge actions, flow kernels, and charge discretisations, testing improvement and universality
+  		\medskip
+  		\item \textbf{Perform a combined continuum extrapolation} of the compatible determinations, quantify the remaining systematic uncertainties, and compare the resulting precision with state-of-the-art calculations.
+  	\end{itemize}
+  \end{block}
 
   \begin{block}{References}
     % \lipsum[1]
