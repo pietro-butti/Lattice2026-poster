@@ -47,7 +47,7 @@
 % Title
 % ====================
 
-\title{Scaling and cutoff effects of the topological susceptibility with gradient flow in $SU(3)$ Yang--Mills theory on the lattice.}
+\title{Scaling and cutoff effects of the topological susceptibility with gradient flow  \\in $SU(3)$ Yang--Mills theory on the lattice.}
 
 % \author{Agajan Torayev \inst{1} \and Ben Bitdiddle \inst{2} \and Lem E. Tweakit \inst{2}}
 \author{P. Butti \inst{1}, G. Catumba \inst{2}, A. Conigli \inst{3}, A. Saez \inst{4}, F. P. Panadero \inst{5}}
@@ -72,14 +72,48 @@
 % (can be left out to remove footer)
 }
 
+% % ====================
+% % Logo (optional)
+% % ====================
+
+% % use this to include logos on the left and/or right side of the header:
+% \logoright{\includegraphics[height=4cm]{logos/NCG-LOGO-INV.pdf}}
+% \logoleft{\includegraphics[height=4cm]{logos/UoN_Logo_NottinghamBlue_WhiteText_CMYK.pdf}}
+
+
 % ====================
-% Logo (optional)
+% Logos
 % ====================
 
-% use this to include logos on the left and/or right side of the header:
-% \logoright{\includegraphics[height=4cm]{logos/NCG-LOGO-INV.pdf}}
-\logoright{\includegraphics[height=4cm]{logos/sdu.png}}
-% \logoleft{\includegraphics[height=4cm]{logos/UoN_Logo_NottinghamBlue_WhiteText_CMYK.pdf}}
+% Every partner logo is fitted into an identical box, so that a square emblem
+% and a wide wordmark carry the same optical weight.
+\newlength{\logocellw}\setlength{\logocellw}{4.6cm}
+\newlength{\logocellh}\setlength{\logocellh}{1.9cm}
+\newcommand{\logocell}[1]{%
+  \makebox[\logocellw][c]{%
+    \includegraphics[width=\logocellw,height=\logocellh,keepaspectratio]{#1}}}
+
+% White plate: the partner logos are dark-on-transparent (or opaque white-bg)
+% artwork and are illegible directly on the nottblue headline.
+\newcommand{\logoplate}[1]{{\setlength{\fboxsep}{2ex}\colorbox{white}{#1}}}
+
+% sdu.png is white artwork on transparency: it belongs on the navy, not a plate.
+% \logoleft{\includegraphics[height=4cm]{logos/sdu.png}}
+\logoleft{
+  \begin{tabular}{1}
+    \logocell{logos/sdu.png} \\
+    \logocell{logos/ific.png} \\
+  \end{tabular}
+}
+
+
+\logoright{\logoplate{%
+  \begin{tabular}[c]{@{}c@{\hspace{2ex}}c@{}}
+    \logocell{logos/bicocca.png} & \logocell{logos/mainz-brutto.png} \\[2ex]
+    \logocell{logos/ific.png}    & \logocell{logos/ift.png}          \\
+  \end{tabular}}%
+}
+
 
 % ====================
 % Body
